@@ -243,7 +243,7 @@ ELEMENT_RESULTS = {
         'description': '은은 가장 높은 반사율을 가진 아름답고 유연한 원소입니다. ISFP의 풍부한 감수성과 예술적 기질은 은의 빛나는 광택과 유연한 성질과 닮았습니다. 은이 빛을 반사하여 아름다움을 전달하듯, 당신은 현재의 순간을 예술적으로 즐길 줄 아는 사람입니다.',
         'properties': ['예술성', '유연함', '겸손함', '감수성'],
         'atomicNumber': 47, 'atomicMass': '107.868 u', 'category': '전이 금속', 'phase': '고체', 'discovery': '고대',
-        'imageUrl': 'https://images.unsplash.com/photo-1533418264835-98fe1e30c64e?q=80&w=800&auto=format&fit=crop', 'usage': '거울 코팅, 은식기, 전자 회로',
+        'imageUrl': 'https://images.unsplash.com/photo-1517400473880-9946298f3366?q=80&w=800&auto=format&fit=crop', 'usage': '거울 코팅, 은식기, 전자 회로',
         'bestMatch': {'mbti': 'ESTJ', 'element': '칼슘', 'reason': '은의 섬세한 예술성과 칼슘의 든든한 지도력이 만나 아름다우면서도 체계적인 결과물을 만듭니다.'}, 
         'worstMatch': {'mbti': 'ENTJ', 'element': '우라늄', 'reason': '유연하고 현재를 즐기는 은의 성질이 목표 지향적이고 강력한 우라늄의 압박감을 견디기 힘듭니다.'}
     },
@@ -279,7 +279,7 @@ ELEMENT_RESULTS = {
         'description': '구리는 열과 전기를 가장 잘 전달하는 밝고 친근한 원소입니다. ESFP의 사교적이고 낙천적인 에너지는 구리의 높은 전도성과 닮았습니다. 구리가 에너지를 전달하듯, 당신은 주변 사람들을 즐겁게 만들고 열정을 공유하는 연예인입니다.',
         'properties': ['사교성', '낙천적', '친화력', '열정'],
         'atomicNumber': 29, 'atomicMass': '63.546 u', 'category': '전이 금속', 'phase': '고체', 'discovery': '고대',
-        'imageUrl': 'https://images.unsplash.com/photo-1624365169192-6f17be3a760d?q=80&w=800&auto=format&fit=crop', 'usage': '전선, 배관, 동전 생산',
+        'imageUrl': 'https://images.unsplash.com/photo-1558332854-f7e35ed41859?q=80&w=800&auto=format&fit=crop', 'usage': '전선, 배관, 동전 생산',
         'bestMatch': {'mbti': 'ISTJ', 'element': '철', 'reason': '구리의 밝은 에너지 전달력과 철의 견고한 지지력이 만나 실용적이면서도 즐거운 파트너십을 이룹니다.'}, 
         'worstMatch': {'mbti': 'INTJ', 'element': '탄소', 'reason': '사교적이고 외향적인 구리의 성질이 독립적이고 내향적인 탄소의 공간을 침해하는 것처럼 느껴질 수 있습니다.'}
     },
@@ -408,7 +408,8 @@ def show_result():
     col1, col2 = st.columns([1, 1])
     
     with col1:
-        st.image(result['imageUrl'], caption=f"활용 사례: {result['usage']}", use_container_width=True)
+        st.markdown(f'<img src="{result["imageUrl"]}" style="width:100%; border-radius:10px; margin-bottom: 10px;" referrerpolicy="no-referrer">', unsafe_allow_html=True)
+        st.caption(f"활용 사례: {result['usage']}")
         st.markdown(f"**원소 기호:** `{result['symbol']}`")
     
     with col2:
